@@ -29,6 +29,7 @@ jobs:
         id: docker_build_vpn
         uses: docker/build-push-action@v2
         with:
+          context: containers/openvpn/
           file: containers/openvpn/Dockerfile
           platforms: linux/amd64
           push: true
