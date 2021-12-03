@@ -21,5 +21,7 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          file: containers/base/Dockerfile
+          platforms: linux/amd64
           push: true
-          tags: zerotens/app:latest
+          tags: zerotens/base:latest
